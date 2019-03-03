@@ -8,11 +8,11 @@ export default class Header extends Component {
       <div className="about">
         <div className="about" id="console">
           <p>
-            &gt; Print Michael.Nguyen
+            &gt; Print michael.nguyen
             <br />
             <span className="term">
               {" "}
-              &nbsp;&nbsp;=&gt; "I'm a software developer living Maryland!"
+              &nbsp;&nbsp;=&gt; "Hi! I'm a software developer living Maryland!"
             </span>
           </p>
           &gt; michael.interests()
