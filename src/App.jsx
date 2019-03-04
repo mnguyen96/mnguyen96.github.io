@@ -10,7 +10,7 @@ library.add(faHome);
 class App extends Component {
   render() {
     return (
-      <HashRouter>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <div>
           <Route path={"/"} component={Header} exact />
           <Route path={"/projects"} component={Projects} />
