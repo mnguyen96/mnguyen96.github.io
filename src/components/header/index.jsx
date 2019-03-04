@@ -38,15 +38,8 @@ export default class Header extends Component {
               "Here are my personal projects!"
             </Link>
             <br />
-            <br />
           </span>
-          &gt; michael.resume()
           <br />
-          <span className="term">
-            &nbsp;&nbsp;=&gt; michaels-resume.pdf
-            <br />
-            <br />
-          </span>
           &gt; _
         </div>
       </div>
