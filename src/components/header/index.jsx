@@ -13,7 +13,7 @@ export default class Header extends Component {
               <br />
               <span className="term">
                 {" "}
-                &nbsp;&nbsp;=&gt; "Hi! I'm a software developer living
+                &nbsp;&nbsp;=&gt; "Hi! I'm a software developer living in
                 Maryland!"
               </span>
             </p>
