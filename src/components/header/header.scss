@@ -41,6 +41,12 @@ span.term {
   padding-left: 20px;
 }
 
+@media (min-width: 1425px) {
+  .about {
+    width: 40%;
+  }
+}
+
 @media (max-width: 800px) {
   .about {
     margin-top: 25%;
