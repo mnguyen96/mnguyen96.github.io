@@ -40,6 +40,15 @@ export default class Header extends Component {
             <br />
           </span>
           <br />
+          &gt; michael.contact()
+          <br />
+          <span className="term">
+            &nbsp;&nbsp;=&gt;{" "}
+            <a href="mailto:michaelalexnguyen@gmail.com">
+              michaelalexnguyen@gmail.com
+            </a>
+            <br />
+          </span>
           &gt; _
         </div>
       </div>
