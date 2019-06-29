@@ -64,3 +64,11 @@
     height: fit-content;
   }
 }
+
+@media (max-width: 800px) {
+  .project {
+    .node {
+      width: 48%;
+    }
+  }
+}
