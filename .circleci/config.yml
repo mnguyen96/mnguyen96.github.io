@@ -37,8 +37,8 @@ jobs:
       - run: yarn test
       - run: yarn build
       - persist_to_workspace:
-	        root: ./
-	        paths: build
+          root: ./
+          paths: build
   deploy:
     docker:
       - image: circleci/node:9
