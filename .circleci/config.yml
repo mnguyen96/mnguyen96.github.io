@@ -36,10 +36,15 @@ jobs:
       # run tests!
       - run: yarn test
       - run: yarn build
+      - persist_to_workspace:
+	          root: ./
+	          paths: build
   deploy:
     docker:
       - image: circleci/node:9
     steps:
+      - attach_workspace:
+          at: ./
       - run:
           name: Make git config folder
           command: mkdir .git
