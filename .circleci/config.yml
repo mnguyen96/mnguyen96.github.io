@@ -43,9 +43,6 @@ jobs:
     docker:
       - image: circleci/node:9
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "8f:f2:4e:a9:02:bd:eb:8c:5b:aa:5c:2d:38:fc:e0:59"
       - attach_workspace:
           at: ./
       - run:
@@ -54,6 +51,9 @@ jobs:
             sudo npm install -g --silent gh-pages@2.0.1
             git config user.email "michaelalexnguyen@gmail.com"
             git config user.name "Michael Nguyen"
+      - add_ssh_keys:
+          fingerprints:
+            - "8f:f2:4e:a9:02:bd:eb:8c:5b:aa:5c:2d:38:fc:e0:59"
       - run:
           name: Deploy docs to gh-pages branch
           command: gh-pages -b master -d build
