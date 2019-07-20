@@ -47,7 +47,7 @@ jobs:
           at: ./
       - run:
           name: Make git config folder
-          command: sudo mkdir .git
+          command: mkdir .git
       - run:
           name: Install and configure dependencies
           command: |
