@@ -39,7 +39,15 @@ jobs:
     docker:
       - image: circleci/node:9
     steps:
-      - run: npm run deploy
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@2.0.1
+            git config user.email "ci-build@test.co"
+            git config user.name "ci-build"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: gh-pages -b master -d build
 
 workflows:
   version: 2
