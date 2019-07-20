@@ -9,7 +9,7 @@ export default class Header extends Component {
         <div className="about" id="console">
           <div className="contents">
             <p>
-              &gt; Print michael.nguyen
+              &gt; Michael.Nguyen[description]
               <br />
               <span className="term">
                 {" "}
@@ -17,7 +17,7 @@ export default class Header extends Component {
                 Maryland!"
               </span>
             </p>
-            &gt; michael.interests()
+            &gt; Michael.Nguyen[interests]
             <br />
             <span className="term">
               &nbsp;&nbsp;=&gt; ["Programming", "Videography", "Design",
@@ -25,7 +25,7 @@ export default class Header extends Component {
             </span>
             <br />
             <br />
-            &gt; michael.education()
+            &gt; Michael.Nguyen[education]
             <br />
             <span className="term">
               &nbsp;&nbsp;=&gt; "Computer Science graduate from University of
@@ -33,7 +33,7 @@ export default class Header extends Component {
               <br />
               <br />
             </span>
-            &gt; michael.projects()
+            &gt; Michael.Nguyen[projects]
             <br />
             <span className="term">
               &nbsp;&nbsp;=&gt;{" "}
