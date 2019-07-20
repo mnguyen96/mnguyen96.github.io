@@ -40,3 +40,11 @@ jobs:
       - image: circleci/node:9
     steps:
       - run: npm run deploy
+
+workflows:
+  build:
+    jobs:
+      - build
+  deploy:
+    jobs:
+      - deploy
