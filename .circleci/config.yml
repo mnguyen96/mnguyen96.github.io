@@ -54,12 +54,15 @@ jobs:
             sudo npm install -g --silent gh-pages@2.0.1
             git config user.email "michaelalexnguyen@gmail.com"
             git config user.name "Michael Nguyen"
+       - run:
+          name: Install and configure dependencies
+          command: git remote add origin https://github.com/mnguyen96/mnguyen96.github.io.git
       - add_ssh_keys:
           fingerprints:
             - "8f:f2:4e:a9:02:bd:eb:8c:5b:aa:5c:2d:38:fc:e0:59"
       - run:
           name: Deploy docs to gh-pages branch
-          command: gh-pages -b master -d build
+          command: gh-pages --dotfiles --message "[skip ci] Updates" -b master -d build
 
 workflows:
   version: 2
