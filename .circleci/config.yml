@@ -54,8 +54,8 @@ jobs:
             sudo npm install -g --silent gh-pages@2.0.1
             git config user.email "michaelalexnguyen@gmail.com"
             git config user.name "Michael Nguyen"
-       - run:
-          name: Install and configure dependencies
+      - run:
+          name: add origin
           command: git remote add origin https://github.com/mnguyen96/mnguyen96.github.io.git
       - add_ssh_keys:
           fingerprints:
