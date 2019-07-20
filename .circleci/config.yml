@@ -53,6 +53,9 @@ jobs:
           fingerprints:
             - "8f:f2:4e:a9:02:bd:eb:8c:5b:aa:5c:2d:38:fc:e0:59"
       - run:
+          name: debug
+          command: ls
+      - run:
           name: Deploy docs to gh-pages branch
           command: gh-pages --dotfiles --message "[skip ci] Updates" --dist build
 
