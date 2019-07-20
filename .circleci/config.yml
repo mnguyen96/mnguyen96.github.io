@@ -35,6 +35,9 @@ jobs:
 
       # run tests!
       - run: yarn test
+      - persist_to_workspace:
+          root: ./
+          paths: build
   deploy:
     docker:
       - image: circleci/node:9
@@ -42,6 +45,8 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "8f:f2:4e:a9:02:bd:eb:8c:5b:aa:5c:2d:38:fc:e0:59"
+      - attach_workspace:
+          at: ./
       - run:
           name: Install and configure dependencies
           command: |
