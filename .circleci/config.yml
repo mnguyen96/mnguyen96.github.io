@@ -47,13 +47,13 @@ jobs:
           at: ./
       - run:
           name: Make git config folder
-          command: mkdir ~/.git
+          command: sudo mkdir ~/.git
       - run:
           name: Install and configure dependencies
           command: |
             sudo npm install -g --silent gh-pages@2.0.1
-            git config user.email "michaelalexnguyen@gmail.com"
-            git config user.name "Michael Nguyen"
+            sudo git config user.email "michaelalexnguyen@gmail.com"
+            sudo git config user.name "Michael Nguyen"
       - add_ssh_keys:
           fingerprints:
             - "8f:f2:4e:a9:02:bd:eb:8c:5b:aa:5c:2d:38:fc:e0:59"
