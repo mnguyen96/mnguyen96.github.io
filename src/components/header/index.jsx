@@ -1,51 +1,91 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import "./header.scss";
+import React from "react";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink
+} from "reactstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default class Header extends Component {
+export default class Example extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.state = {
+      collapsed: true
+    };
+  }
+
+  toggleNavbar() {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  }
   render() {
     return (
-      <div className="about">
-        <div className="about" id="console">
-          <div className="contents">
-            <p>
-              &gt; Michael.Nguyen[description]
-              <br />
-              <span className="term">
-                {" "}
-                &nbsp;&nbsp;=&gt; "Hi! I'm a software developer living in
-                Maryland!"
-              </span>
-            </p>
-            &gt; Michael.Nguyen[interests]
-            <br />
-            <span className="term">
-              &nbsp;&nbsp;=&gt; ["Programming", "Videography", "Design",
-              "Music"]
-            </span>
-            <br />
-            <br />
-            &gt; Michael.Nguyen[education]
-            <br />
-            <span className="term">
-              &nbsp;&nbsp;=&gt; "Computer Science graduate from University of
-              Maryland, College Park"
-              <br />
-              <br />
-            </span>
-            &gt; Michael.Nguyen[projects]
-            <br />
-            <span className="term">
-              &nbsp;&nbsp;=&gt;{" "}
-              <Link to="/projects" id="link">
-                "Here are my personal projects!"
-              </Link>
-              <br />
-            </span>
-            <br />
-            &gt; _
-          </div>
-        </div>
+      <div>
+        <Navbar color="dark" dark>
+          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+          {/* <NavbarBrand href="#" className="mr-auto">
+            Michael Nguyen
+          </NavbarBrand> */}
+          <Collapse isOpen={!this.state.collapsed} navbar>
+            <Nav navbar>
+              <NavItem>
+                <NavLink href="#/">
+                  <FontAwesomeIcon icon="home" color="white" className="mr-1" />
+                  Home
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#/projects/">
+                  <FontAwesomeIcon
+                    icon="wrench"
+                    color="white"
+                    className="mr-1"
+                  />
+                  Projects
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <a
+                  href="https://github.com/mnguyen96"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <NavLink>
+                    <FontAwesomeIcon
+                      icon={["fab", "github"]}
+                      color="white"
+                      className="mr-1"
+                    />
+                    GitHub
+                  </NavLink>
+                </a>
+              </NavItem>
+              <NavItem>
+                <a
+                  href="https://www.linkedin.com/in/michael-nguyen-955322a4/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <NavLink>
+                    <FontAwesomeIcon
+                      icon={["fab", "linkedin"]}
+                      className="mr-1"
+                      color="white"
+                    />
+                    LinkedIn
+                  </NavLink>
+                </a>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
       </div>
     );
   }

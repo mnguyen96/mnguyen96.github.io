@@ -1,25 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ReactTooltip from "react-tooltip";
 import "./projects.scss";
 
 export default function Projects() {
   return (
-    <div>
-      <div className="button">
-        <ReactTooltip />
-        <Link to="/" id="link">
-          <FontAwesomeIcon
-            icon="home"
-            size="2x"
-            color="white"
-            data-tip="Home"
-          />
-        </Link>
-      </div>
+    <div className="mx-5 my-5">
       <div className="project">
-        <h2>My Projects</h2>
+        <h2 className="my-4">My Projects</h2>
 
         <div className="node">
           <a href="https://github.com/mnguyen96/Stock-sentiment-predictor">

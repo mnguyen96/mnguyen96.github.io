@@ -1,0 +1,67 @@
+a:link {
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.about {
+  border-radius: 9px;
+  margin: 5% auto 10% auto;
+  padding-top: 20px;
+  font-size: 30px;
+  vertical-align: middle;
+  background: rgb(233, 233, 233);
+  font-family: "Monaco", "Courier New";
+  text-align: left;
+  font-size: 13px;
+  color: #fafafa;
+  min-width: 30vw;
+}
+
+.aboutWrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+@media(max-width: 500px) {
+  .about {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 90%;
+  }
+  .contents {
+    font-size: 1em;
+  }
+}
+
+.contents {
+  padding: 20px;
+}
+
+#console {
+  margin: 0 auto;
+  background: #2d2d3e;
+  width: 100%;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+}
+
+span.term {
+  color: rgb(255, 255, 255);
+  padding-left: 20px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
