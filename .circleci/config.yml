@@ -46,9 +46,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: ./build
-      - run:
-          name: Make git config folder
-          command: mkdir .git
+      # - run:
+      #     name: Make git config folder
+      #     command: mkdir .git
       - run:
           name: Install and configure dependencies
           command: |
