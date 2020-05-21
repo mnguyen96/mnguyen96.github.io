@@ -9,7 +9,7 @@ export default function Main() {
         <div id="console">
           <div className="contents">
             <p>
-              &gt; Michael.Nguyen[description]
+              &gt; Michael.Nguyen[description]test
               <br />
               <span className="term">
                 {" "}
