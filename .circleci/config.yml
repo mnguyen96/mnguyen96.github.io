@@ -43,23 +43,26 @@ jobs:
     docker:
       - image: circleci/node:9
     steps:
+      - checkout
       - attach_workspace:
-          at: ./
+          at: ./build
       - run:
           name: Make git config folder
           command: mkdir .git
       - run:
           name: Install and configure dependencies
           command: |
-            sudo npm install -g --silent gh-pages@2.0.1
+            npm install -g --silent gh-pages@2.0.1
             git config user.email "michaelalexnguyen@gmail.com"
             git config user.name "Michael Nguyen"
+            git init
+            git remote add --fetch origin "$remote"
       - add_ssh_keys:
           fingerprints:
             - "8f:f2:4e:a9:02:bd:eb:8c:5b:aa:5c:2d:38:fc:e0:59"
       - run:
           name: Deploy docs to gh-pages branch
-          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist build
+          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist ./build
 
 workflows:
   version: 2
@@ -69,3 +72,6 @@ workflows:
       - deploy:
           requires:
             - build
+          filters:
+            branches:
+              only: master
