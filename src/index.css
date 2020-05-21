@@ -1,6 +1,9 @@
 html {
   height: 100%;
 }
+#root {
+  height: 100%;
+}
 body {
   background: linear-gradient(30deg, #3e8da5, #433a93);
   margin: 0;
@@ -10,6 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {

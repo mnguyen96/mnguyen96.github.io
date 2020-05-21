@@ -21,12 +21,12 @@ a:visited {
 }
 
 .aboutWrapper {
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .about {
     display: block;
     margin-top: auto;
