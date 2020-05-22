@@ -52,12 +52,13 @@ jobs:
             sudo npm install -g --silent gh-pages@2.0.1
             git config user.email "michaelalexnguyen@gmail.com"
             git config user.name "Michael Nguyen"
+            ls
       - add_ssh_keys:
           fingerprints:
             - "58:41:7d:b8:54:ba:57:b8:69:1e:f9:73:3d:4b:1e:db"
       - run:
           name: Deploy docs to gh-pages branch
-          command: gh-pages -b master --dotfiles --message "[skip ci] Updates" --dist ./build
+          command: gh-pages -b master -t -m "[skip ci] Updates" -d ./build
 
 workflows:
   version: 2
