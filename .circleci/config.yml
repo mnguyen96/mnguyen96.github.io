@@ -54,7 +54,7 @@ jobs:
             git config user.name "Michael Nguyen"
       - add_ssh_keys:
           fingerprints:
-            - "8f:f2:4e:a9:02:bd:eb:8c:5b:aa:5c:2d:38:fc:e0:59"
+            - "58:41:7d:b8:54:ba:57:b8:69:1e:f9:73:3d:4b:1e:db"
       - run:
           name: Deploy docs to gh-pages branch
           command: gh-pages --dotfiles --message "[skip ci] Updates" --dist ./build
