@@ -17,3 +17,9 @@ jobs:
       - run:
           name: Deploy to master branch
           command: gh-pages -b master -t -m "[skip ci] Updates" -d build
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - deploy
