@@ -1,10 +1,36 @@
 version: 2
 jobs:
+  build:
+    docker:
+      - image: circleci/node:9
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+
+      - run: yarn install --ignore-engines
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: yarn build
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - build
   deploy:
     docker:
       - image: circleci/node:9
     steps:
       - checkout
+      - attach_workspace:
+          at: ./
       - run:
           name: Install and configure dependencies
           command: |
@@ -20,6 +46,13 @@ jobs:
 
 workflows:
   version: 2
-  deploy:
+  build-test-deploy:
     jobs:
-      - deploy
+      - build:
+          filters:
+            branches:
+              only:
+                - source
+      - deploy:
+          requires:
+            - build
