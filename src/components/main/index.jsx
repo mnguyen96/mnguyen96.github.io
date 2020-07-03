@@ -28,7 +28,7 @@ export default function Main() {
             &gt; Michael.Nguyen[education]
             <br />
             <span className="term">
-              &nbsp;&nbsp;=&gt; "Computer Science graduate from University of
+              &nbsp;&nbsp;=&gt; "B.S in Computer Science from University of
               Maryland, College Park"
               <br />
               <br />
