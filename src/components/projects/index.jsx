@@ -3,11 +3,11 @@ import './projects.scss';
 
 export default function Projects() {
   return (
-    <div className="d-flex m-3">
+    <div className="d-flex m-3 pt-5">
       <div className="project">
         <h2 className="my-4">Projects</h2>
-        <div className="d-flex d-flex justify-content-center align-items-center h-100">
-          <div className="node">
+        <div className="d-flex d-flex justify-content-center align-items-center h-100 flex-row flex-wrap">
+          <div className="node my-2 mx-sm-1 mx-md-4 flex-grow-1 flex-md-grow-0">
             <a href="https://github.com/mnguyen96/Stock-sentiment-predictor">
               <img
                 src={process.env.PUBLIC_URL + '/media/knn.png'}
@@ -33,7 +33,7 @@ export default function Projects() {
               </div>
             </div>
           </div>
-          <div className="node">
+          <div className="node my-2 mx-2 mx-md-4 flex-grow-1 flex-md-grow-0">
             <a href="https://mnguyen96.github.io/audiovisualizer/index.html">
               <img
                 width="70%"
