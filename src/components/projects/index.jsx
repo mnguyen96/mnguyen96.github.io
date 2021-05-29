@@ -24,7 +24,7 @@ export default function Projects() {
                 </a>
               </div>
               <div className="description">
-                I made a learning program that applies the KNN algorithm and historic weekly stock data from yahoo
+                A machine learning script that applies the KNN algorithm and historic weekly stock data from yahoo
                 finance to predict stock sentiment and movement.
               </div>
 
@@ -50,7 +50,7 @@ export default function Projects() {
                 </a>
               </div>
               <div className="description">
-                I made an audio visualizer using Javascript and Three.js. Using the Web Audio API, the program analyzes
+                An audio visualizer using Javascript and Three.js. Using the Web Audio API, the program analyzes
                 frequency data from a AnalyserNode and displays a specific hue and height based on the read frequency.
               </div>
               <div className="language_container">
