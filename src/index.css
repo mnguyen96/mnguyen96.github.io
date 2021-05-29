@@ -3,6 +3,7 @@ html {
 }
 #root {
   height: 100%;
+  overflow: auto;
 }
 body {
   background: linear-gradient(30deg, #3e8da5, #433a93);
@@ -13,7 +14,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
 }
 
 code {
